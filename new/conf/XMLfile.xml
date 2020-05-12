@@ -1,0 +1,21 @@
+<dataConfig>
+  <dataSource type="FileDataSource" encoding="utf-8"/>
+  <document>
+
+      <entity name="clitri"
+              processor="XPathEntityProcessor"
+              stream="true"
+              url="C:\test.xml"
+              forEach="/clinical_study">
+
+    <field column="id"                 xpath="/clinical_study/id_info/nct_id" />
+    <field column="brief_title"        xpath="/clinical_study/brief_title" />
+    <field column="brief_summary"      xpath="/clinical_study/brief_summary/textblock" />
+    <field column="overall_status"     xpath="/clinical_study/overall_status" />
+
+
+
+    </entity>
+
+</document>
+</dataConfig>
